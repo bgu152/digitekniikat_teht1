@@ -1,0 +1,73 @@
+/* Karuselli navi palkin alle */
+#demo  {margin-top:50px}
+
+/* Oletusfontti */
+
+html{
+    font-family: 'Raleway', sans-serif;
+}
+
+
+
+/* Nav taustan väri */
+.navbar-custom{
+    background-color: rgba(137,17,76,0.9);
+}
+
+/* brandin ja tekstin väri */
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-text{
+    color: rgba(241,135,187, 0.8);
+}
+
+/* brandin fontti */
+.navbar-brand{    
+    font-family: 'Righteous', cursive;
+}
+
+/* linkin väri ja fontti */
+.navbar-custom .navbar-nav .nav-link {
+    color: rgba(241,135,187, 0.8);
+    font-family: 'Oswald', sans-serif;
+}
+
+
+/* aktiivisen & hover-linkin väri */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #ffffff;
+}
+
+/* Hampurilaisbuttoni */
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+  
+  /* Alasvetovalikon värien vaihto  */
+
+  .nav-item .dropdown-menu a:hover {
+    color: white !important;
+    background: pink !important;
+    cursor: pointer;
+}
+
+/* ravintola grid kuvat */
+
+#ravintola img{
+    width: 100%;
+    max-width: 400px;
+    border-top-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+}
+
+/* ravintola grid teksti */
+
+#ravintola div{
+    text-align: center;
+}
+
+/* padding for container */
+
+.container {
+    padding-top:30px;
+}

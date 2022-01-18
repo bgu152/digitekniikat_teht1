@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oppimistehtävä 1</title>
+    <!--bootstrapin CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- oma ulkoinen css -->
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+    <main id="alku" class="container">
+        <nav class="navbar navbar-expand-sm navbar-custom fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Majvik Bistro</a>
+                <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapsibleNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ravintola">Etusivu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ravintola">Ravintola</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Menu</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Lounas</a></li>
+                                <li><a class="dropdown-item" href="#">A la carte</a></li>
+                                <li><a class="dropdown-item" href="#">Juomat</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Ota yhteyttä</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Karuselli alkaa -->
+        <!-- Carousel -->
+        <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+            <!-- Indicators/dots -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            </div>
+
+            <!-- The slideshow/carousel -->
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/annos10.jpg" alt="Los Angeles" class="d-block" style="width:100%">
+                    <div class="carousel-caption">
+                        <h3>A la carte</h3>
+                        <p>Löydät herkulliset annokset a la carte listaltamme!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/ravintola1.jpg" alt="Chicago" class="d-block" style="width:100%">
+                    <div class="carousel-caption">
+                        <h3>Kodikas ravintola</h3>
+                        <p>Tervetuloa viihtymään!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/salaatti1.jpg" alt="New York" class="d-block" style="width:100%">
+                    <div class="carousel-caption">
+                        <h3>Ihania salaatteja</h3>
+                        <p>Raikkaat salaatit suoraan pellolta!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Left and right controls/icons -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+
+
+        <!-- grid rakenne -->
+        <div class="container" id="ravintola">
+            <div class="row">
+                <div class="col-lg-4"><img src="images/keitto1.jpg" alt="keitto1"></div>
+                <div class="col-lg-4">
+                    <h1>Bistro Majvik</h1>
+                    <p>Tule nauttimaan hyvästä ruosta ja laajasta vuomavalikoimastamme tunnelmalliseen
+                        maalaisympäristöön. Löydä meidät Sipoon kuvankauniista Majviikista, Majvikintie 68.</p>
+                    <p>
+                        Auki: <br>
+                        su-to 10:30 - 22:00 <br>
+                        pe-la 10:30 - 24:00
+                    </p>
+                </div>
+                <div class="col-lg-4"><img src="images/suolainen2.jpg" alt=""></div>
+            </div>
+        </div>
+
+
+
+    </main>
+
+
+
+    <!--bootstrap, bundle-versiossa on mukana myös popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Google tyyli brändi 
+    font-family: 'Righteous', cursive;
+    -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+    </style>
+    <!-- Google tyyli navipalkin linkit 
+    font-family: 'Oswald', sans-serif;
+    -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+    </style>
+
+    <!-- Google tyyli leipäteksti 
+    font-family: 'Raleway', sans-serif;
+    -->
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+    </style>
+</body>
+
+</html>

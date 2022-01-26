@@ -264,6 +264,52 @@
             </div>
         </div>
 
+        
+
+        <!--Lomake-->
+
+        <div class="container">
+            <h3>Anna palautetta</h3>
+            <form onsubmit="return false">
+                <label for="nimi">Nimi: </label> <input type="text" id="nimi" required="true"><br>
+                <label for="sposti">Sähköposti: </label> <input type="email" id="sposti" required="true"><br>
+                <label for="puhelin">Puhelin: </label> <input type="text" id="puhelin" pattern="\+?[0-9()\-]+"><br>                
+              
+                <!--raidiobuttonit-->
+                Arvio sivustamme: <br>
+                <label><input type="radio" name="arvio" value="ihan parhaat"> ihan parhaat</label><br>
+                <label><input type="radio" name="arvio" value="menettelee"> no menettelee</label><br>
+                <label><input type="radio" name="arvio" value="jos on pakko"> jos on pakko niin käytän</label><br>
+                <label><input type="radio" name="arvio" value="ei ikinä"> ei ikinä enää tänne</label><br><br>
+              
+                <!--checkboxit-->
+                Mitä haluaisit lisää? <br>
+                <label><input type="checkbox" name="lisaa" value="kuvia"> kuvia</label><br>
+                <label><input type="checkbox" name="lisaa" value="resepteja"> reseptejä</label><br>
+                <label><input type="checkbox" name="lisaa" value="tapahtumat"> tietoa tapahtumista</label><br>
+                <label><input type="checkbox" name="lisaa" value="arvioita"> muiden asiakkaiden arvioita</label><br><br>
+
+                <!--textarea-->
+                <label for="palaute" style="vertical-align: top;">Palaute: </label> <textarea id="palaute" rows="4" cols="30"></textarea><br><br>
+
+                <!--alasvetovalikko-->
+
+                <label for="alasvetovalikko">Löysitkö etsimäsi sivuiltamme?</label><br>
+                <select id="alasvetovalikko">
+                    <option value="Kyllä">Kyllä</option>
+                    <option value="Ei">Ei</option>
+                </select>
+                <br><br>
+
+
+
+                <!--Lähetä tai resetoi-->
+                <input type="submit" value="Lähetä" onclick="varaus()"><br>
+                <input type="reset" value="reset"><br><br>
+            </form>
+        </div>
+        <div id="tiedot"></div>
+
     </main>
 
 
@@ -290,6 +336,59 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
     </style>
+
+    <script>
+        function varaus(){
+            var nimi = document.getElementById("nimi").value;
+            var sposti=document.getElementById("sposti").value;
+            var puhelin=document.getElementById("puhelin").value;
+
+            
+
+            //radiobutton
+
+            var arvio = "Arviosi on: ";
+            var radios = document.getElementsByName("arvio");
+            var radioLength = radios.length;
+
+            for(var i = 0; i < radioLength; i++){
+                if(radios[i].checked){
+                    arvio += radios[i].value;
+                }
+            }
+
+            //checkbox
+            var valinnat = "Halusit lisää: ";
+            var boksit = document.getElementsByName("lisaa");
+
+            for(var i = 0, length = boksit.length; i < boksit.length; i++){
+                if(boksit[i].checked){
+                    valinnat = valinnat + boksit[i].value;
+                    break;
+                }
+            }
+
+            //textarea palaute
+            var palaute = document.getElementById("palaute").value;
+
+            //alavetovalikko
+            var alasvetovalinta = "Löysitkö etsimäsi? ";
+            var valittuIndeksi = document.getElementById("alasvetovalikko").selectedIndex;
+            var alasvetovalinnat = document.getElementById("alasvetovalikko").options;
+            alasvetovalinta += alasvetovalinnat[valittuIndeksi].text;
+
+
+            // tulostus
+
+            document.getElementById("tiedot").innerHTML = "Nimi: " + nimi + "<br>"
+            + "Sähköposti: " + sposti +"<br>" +"Puhelin: " + puhelin + "<br>"
+            + arvio + "<br>"
+             + valinnat +"<br>"
+             +"Palautteesi on: " + palaute + "<br>" 
+             + alasvetovalinta;
+        }
+    
+    </script>
 </body>
 
 </html>
